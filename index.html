@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLIDARE - Ser Humano é Ser SOLIDARE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Image -->
+    <div class="main-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">SOLIDARE</div>
+        <ul class="nav-links">
+            <li><a href="#home">Página inicial</a></li>
+            <li><a href="#about">Sobre o Projeto</a></li>
+            <li><a href="#impact">Impacto</a></li>
+            <li><a href="#team">Nosso Time</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+        </ul>
+        <a href="https://forms.gle/SfQ3ioxkUBrLvCJL9" target="_blank" class="nav-cta">Voluntariar</a>
+    </nav>
+
+    <!-- Splash Section -->
+    <header id="splash" class="splash-section">
+        <img src="logo-final.png" alt="SOLIDARE Logo" class="splash-logo">
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero glass-panel">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1>Ser Humano é Ser <br><span class="gradient-text">SOLIDARE</span></h1>
+                    <p>Uma iniciativa criada por alunos do ensino médio da Escola Maple Bear, em Goiânia, com a missão de apoiar comunidades vulnerabilizadas através de segurança alimentar, acesso à cultura e fortalecimento social.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="https://forms.gle/SfQ3ioxkUBrLvCJL9" target="_blank" class="btn primary">Torne-se voluntário!</a>
+                        <div class="pix-card glass-item copyable" onclick="copyText('62992705743', this)">
+                            <div class="pix-label">Apoie com PIX</div>
+                            <div class="pix-key">62992705743</div>
+                            <div class="pix-name">Ana Carolina Faria de Souza</div>
+                            <span class="tooltip">Clique para copiar a chave</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="glass-panel">
+            <h2>Sobre o Projeto</h2>
+            <div class="about-content" style="font-size: 1.15rem; line-height: 1.6; color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto;">
+                <p class="editavel" style="margin-bottom: 20px;">O <strong>SOLIDARE</strong> é uma iniciativa solidária criada por alunos do ensino médio da Escola Maple Bear, em Goiânia. Nosso principal objetivo é gerar um impacto positivo na comunidade local, apoiando famílias e indivíduos em situação de vulnerabilidade.</p>
+                <p class="editavel">Acreditamos que ser humano é ser solidário. Por isso, nossas ações são focadas na <strong>segurança alimentar</strong>, no <strong>acesso à cultura</strong> e no <strong>fortalecimento social</strong>, buscando sempre levar dignidade, esperança e oportunidades para quem mais precisa.</p>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="glass-panel">
+            <h2>Nosso Impacto</h2>
+            <div class="impact-grid">
+                <div class="impact-card glass-item">
+                    <div class="impact-icon">🌟</div>
+                    <h3 class="editavel">60+</h3>
+                    <p class="editavel">Líderes solidários formados pela nossa iniciativa.</p>
+                </div>
+                <div class="impact-card glass-item">
+                    <div class="impact-icon">💖</div>
+                    <h3 class="editavel">400+</h3>
+                    <p class="editavel">Vidas impactadas diretamente por nossas ações.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="glass-panel">
+            <h2>Nosso Time</h2>
+            <div id="team-grid" class="team-grid">
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Julia Andrade Moreira</h4>
+                    <span class="role editavel">Fundadora / RH</span>
+                </div>
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Jade Cristina Coutinho</h4>
+                    <span class="role editavel">Fundadora / Marketing</span>
+                </div>
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Beatriz Carvalho</h4>
+                    <span class="role editavel">Fundadora / Financeiro</span>
+                </div>
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Sophia Geller Pires</h4>
+                    <span class="role editavel">Secretária Geral</span>
+                </div>
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Heytor Albernaz</h4>
+                    <span class="role editavel">Voluntário</span>
+                </div>
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Pedro Henrique Cozac</h4>
+                    <span class="role editavel">Voluntário</span>
+                </div>
+                <div class="team-member glass-item">
+                    <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro" style="display:none">✕</button>
+                    <h4 class="editavel">Carlos Alexandre Costa</h4>
+                    <span class="role editavel">Membro do RH</span>
+                </div>
+            </div>
+            <div class="edit-only add-item-wrapper" style="display:none">
+                <button class="btn-add-item" onclick="addMembro()">+ Adicionar Membro</button>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="eventos" class="glass-panel">
+            <h2>Eventos</h2>
+            <div id="eventos-grid" class="eventos-grid">
+                <p class="eventos-empty-state" id="eventos-empty">Nenhum evento registrado ainda.</p>
+            </div>
+            <div class="edit-only add-item-wrapper" style="display:none">
+                <button class="btn-add-item" onclick="addEvento()">+ Adicionar Evento</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="contact-item">
+                <span class="contact-label">Instagram</span>
+                <a href="https://instagram.com/sejasolidare" target="_blank" class="contact-value">@sejasolidare</a>
+            </div>
+            <div class="contact-item copyable" onclick="copyText('solidare.hs@maplebeargoiania.com.br', this)">
+                <span class="contact-label">E-mail</span>
+                <span class="contact-value">solidare.hs@maplebeargoiania.com.br</span>
+                <span class="tooltip">Clique para copiar</span>
+            </div>
+            <div class="contact-item copyable" onclick="copyText('+55 (62) 99989-1959', this)">
+                <span class="contact-label">Telefone</span>
+                <span class="contact-value">+55 (62) 99989-1959</span>
+                <span class="tooltip">Clique para copiar</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Projeto SOLIDARE. Todos os direitos reservados.</p>
+            <span
+                id="version-trigger"
+                title=""
+                onclick="activarModoEdicao()"
+            >v1.0.4-stable</span>
+        </div>
+    </footer>
+    <script>
+        /* ── Copy-to-clipboard helper ── */
+        function copyText(text, element) {
+            navigator.clipboard.writeText(text).then(() => {
+                const tooltip = element.querySelector('.tooltip');
+                const originalText = tooltip.innerText;
+                tooltip.innerText = 'Copiado!';
+                tooltip.classList.add('copied');
+                setTimeout(() => {
+                    tooltip.innerText = originalText;
+                    tooltip.classList.remove('copied');
+                }, 2000);
+            }).catch(err => console.error('Erro ao copiar: ', err));
+        }
+
+        /* ── Hidden Edit Mode ── */
+        const EDIT_KEY     = 'renzo_lindo';
+        const EDIT_OUTLINE = '2px dashed #FF7F50';
+        let   editModeActive  = false;
+        let   originalContents = new Map();
+        let   originalGridHTML = {};
+
+        function activarModoEdicao() {
+            if (editModeActive) return;
+
+            const key = prompt('Insira a chave de acesso:');
+            if (key === null) return;
+
+            if (key.trim() !== EDIT_KEY) {
+                alert('Chave incorreta.');
+                return;
+            }
+
+            editModeActive = true;
+            originalContents.clear();
+
+            /* Snapshot grid innerHTML for structural cancel (add/remove cards) */
+            originalGridHTML.team    = document.getElementById('team-grid').innerHTML;
+            originalGridHTML.eventos = document.getElementById('eventos-grid').innerHTML;
+
+            /* Make static .editavel elements editable (skip grid children — grids restore via innerHTML) */
+            document.querySelectorAll('.editavel').forEach(el => {
+                if (!el.closest('#team-grid') && !el.closest('#eventos-grid')) {
+                    originalContents.set(el, el.innerHTML);
+                }
+                el.contentEditable = 'true';
+                el.style.outline       = EDIT_OUTLINE;
+                el.style.outlineOffset = '4px';
+                el.style.borderRadius  = '4px';
+                el.style.cursor        = 'text';
+                el.style.transition    = 'outline 0.2s ease';
+            });
+
+            /* Show edit-only controls */
+            document.querySelectorAll('.edit-only').forEach(el => el.style.display = '');
+
+            /* Check / hide empty-state message */
+            _syncEmptyState();
+
+            /* ── Floating bar ── */
+            const bar = document.createElement('div');
+            bar.id = 'edit-mode-bar';
+            bar.style.cssText = `
+                position: fixed; bottom: 28px; right: 28px;
+                z-index: 9999; display: flex; align-items: center; gap: 8px;
+            `;
+
+            const btnConfirm = document.createElement('button');
+            btnConfirm.id          = 'btn-confirmar-edicao';
+            btnConfirm.textContent = 'Confirmar';
+            btnConfirm.style.cssText = `
+                padding: 14px 26px;
+                background: linear-gradient(135deg, #FF7F50, #FF4500);
+                color: #fff; font-family: 'Outfit', sans-serif;
+                font-size: 0.95rem; font-weight: 600; border: none;
+                border-radius: 50px; cursor: pointer;
+                box-shadow: 0 8px 24px rgba(255,127,80,0.45);
+                letter-spacing: 0.03em;
+                transition: transform 0.15s ease, box-shadow 0.15s ease;
+            `;
+            btnConfirm.onmouseenter = () => { btnConfirm.style.transform='scale(1.05)'; btnConfirm.style.boxShadow='0 12px 32px rgba(255,127,80,0.6)'; };
+            btnConfirm.onmouseleave = () => { btnConfirm.style.transform='scale(1)';    btnConfirm.style.boxShadow='0 8px 24px rgba(255,127,80,0.45)'; };
+            btnConfirm.onclick = finalizarEdicao;
+
+            const btnCancel = document.createElement('button');
+            btnCancel.id = 'btn-cancelar-edicao';
+            btnCancel.textContent = '✕';
+            btnCancel.title = 'Cancelar edição';
+            btnCancel.style.cssText = `
+                width: 46px; height: 46px; display: flex;
+                align-items: center; justify-content: center;
+                background: rgba(255,255,255,0.18);
+                backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+                color: #FF7F50; font-family: 'Outfit', sans-serif;
+                font-size: 1.1rem; font-weight: 700;
+                border: 1.5px solid rgba(255,127,80,0.45); border-radius: 50%;
+                cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+                transition: transform 0.15s ease, background 0.15s ease;
+            `;
+            btnCancel.onmouseenter = () => { btnCancel.style.transform='scale(1.1)'; btnCancel.style.background='rgba(255,127,80,0.15)'; };
+            btnCancel.onmouseleave = () => { btnCancel.style.transform='scale(1)';   btnCancel.style.background='rgba(255,255,255,0.18)'; };
+            btnCancel.onclick = cancelarEdicao;
+
+            bar.appendChild(btnConfirm);
+            bar.appendChild(btnCancel);
+            document.body.appendChild(bar);
+        }
+
+        function _makeEditable(el) {
+            el.contentEditable = 'true';
+            el.style.outline       = EDIT_OUTLINE;
+            el.style.outlineOffset = '4px';
+            el.style.borderRadius  = '4px';
+            el.style.cursor        = 'text';
+        }
+
+        function _limparModoEdicao() {
+            document.querySelectorAll('.editavel').forEach(el => {
+                el.contentEditable = 'false';
+                el.style.outline = el.style.outlineOffset = el.style.borderRadius = el.style.cursor = '';
+            });
+            document.querySelectorAll('.edit-only').forEach(el => el.style.display = 'none');
+            const bar = document.getElementById('edit-mode-bar');
+            if (bar) bar.remove();
+            editModeActive = false;
+        }
+
+        function _syncEmptyState() {
+            const grid  = document.getElementById('eventos-grid');
+            const empty = document.getElementById('eventos-empty');
+            if (!empty) return;
+            const hasCards = grid.querySelector('.evento-card');
+            empty.style.display = hasCards ? 'none' : '';
+        }
+
+        function finalizarEdicao() {
+            _syncEmptyState();
+            _limparModoEdicao();
+            originalContents.clear();
+            originalGridHTML = {};
+        }
+
+        function cancelarEdicao() {
+            /* Restore static editable text */
+            originalContents.forEach((html, el) => { el.innerHTML = html; });
+            /* Restore grid structure (removes added cards, restores removed ones) */
+            document.getElementById('team-grid').innerHTML    = originalGridHTML.team;
+            document.getElementById('eventos-grid').innerHTML = originalGridHTML.eventos;
+            _limparModoEdicao();
+            originalContents.clear();
+            originalGridHTML = {};
+        }
+
+        /* ─────────────────────────────────────────
+           Team Management
+        ───────────────────────────────────────── */
+        function addMembro() {
+            const grid = document.getElementById('team-grid');
+            const card = document.createElement('div');
+            card.className = 'team-member glass-item';
+            card.innerHTML = `
+                <button class="btn-remove-item edit-only" onclick="removeMembro(this)" title="Remover membro">✕</button>
+                <h4 class="editavel">Nome do Membro</h4>
+                <span class="role editavel">Cargo</span>
+            `;
+            grid.appendChild(card);
+            card.querySelectorAll('.editavel').forEach(_makeEditable);
+        }
+
+        function removeMembro(btn) {
+            btn.closest('.team-member').remove();
+        }
+
+        /* ─────────────────────────────────────────
+           Events Management
+        ───────────────────────────────────────── */
+        function addEvento() {
+            const grid  = document.getElementById('eventos-grid');
+            const empty = document.getElementById('eventos-empty');
+            if (empty) empty.style.display = 'none';
+
+            const card = document.createElement('div');
+            card.className = 'evento-card glass-item';
+            card.innerHTML = `
+                <button class="btn-remove-item edit-only" onclick="removeEvento(this)" title="Remover evento">✕</button>
+                <div class="evento-images-area">
+                    <label class="upload-area edit-only" title="Clique para adicionar fotos">
+                        <input type="file" accept="image/*" multiple onchange="handleEventoImages(this)">
+                        <span>📷 Adicionar fotos</span>
+                    </label>
+                    <div class="evento-fotos"></div>
+                </div>
+                <div class="evento-content">
+                    <h3 class="editavel evento-titulo">Título do Evento</h3>
+                    <p class="editavel evento-desc">Escreva aqui a descrição do evento…</p>
+                </div>
+            `;
+            grid.appendChild(card);
+            card.querySelectorAll('.editavel').forEach(_makeEditable);
+        }
+
+        function removeEvento(btn) {
+            btn.closest('.evento-card').remove();
+            _syncEmptyState();
+        }
+
+        function handleEventoImages(input) {
+            const fotosDiv = input.closest('.evento-images-area').querySelector('.evento-fotos');
+            Array.from(input.files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = e => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'foto-wrapper';
+
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+                    wrapper.appendChild(img);
+
+                    const removeBtn = document.createElement('button');
+                    removeBtn.className = 'btn-remove-foto edit-only';
+                    removeBtn.textContent = '✕';
+                    removeBtn.title = 'Remover foto';
+                    removeBtn.onclick = () => wrapper.remove();
+                    wrapper.appendChild(removeBtn);
+
+                    fotosDiv.appendChild(wrapper);
+                };
+                reader.readAsDataURL(file);
+            });
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
