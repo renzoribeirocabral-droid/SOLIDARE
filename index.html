@@ -294,43 +294,58 @@
                 
                 upcomingContainer.innerHTML = '';
                 completedContainer.innerHTML = '';
-                
-                const blocks = text.split(/T[íi]tulo:/i).filter(b => b.trim().length > 0);
-                
+
+                // Divide o texto em blocos separados por uma ou mais linhas em branco
+                const blocks = text
+                    .replace(/\r\n/g, '\n')   // normaliza quebras de linha
+                    .split(/\n{2,}/)           // separa pelos espaços em branco entre eventos
+                    .map(b => b.trim())
+                    .filter(b => b.length > 0);
+
                 const now = new Date();
                 let hasUpcoming = false;
                 let hasCompleted = false;
 
                 blocks.forEach(block => {
                     const lines = block.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-                    
-                    let title = lines[0] || 'Sem título';
+
+                    let title = '';
                     let subtitle = '';
                     let dateStr = '';
-                    
+
                     lines.forEach(line => {
-                        if (line.toLowerCase().startsWith('subt')) {
-                            subtitle = line.replace(/Subt[íi]tulo:/i, '').trim();
-                        } else if (line.toLowerCase().startsWith('data:')) {
-                            dateStr = line.replace(/Data:/i, '').replace(/[()]/g, '').trim();
+                        // Usa regex flexível que aceita espaço ou não após os dois pontos
+                        if (/^T[íi]tulo\s*:/i.test(line)) {
+                            title = line.replace(/^T[íi]tulo\s*:\s*/i, '').trim();
+                        } else if (/^Subt[íi]tulo\s*:/i.test(line)) {
+                            subtitle = line.replace(/^Subt[íi]tulo\s*:\s*/i, '').trim();
+                        } else if (/^Data\s*:/i.test(line)) {
+                            dateStr = line.replace(/^Data\s*:\s*/i, '').replace(/[()]/g, '').trim();
                         }
                     });
 
+                    // Ignora blocos que não têm título
+                    if (!title) return;
+
+                    // Determina se o evento já passou com base na data DD/MM/AAAA
                     const dateParts = dateStr.split('/');
                     let isPast = true;
                     if (dateParts.length === 3) {
-                        const eventDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
-                        // Ajuste para comparar apenas a data (sem hora)
+                        const eventDate = new Date(
+                            parseInt(dateParts[2]),
+                            parseInt(dateParts[1]) - 1,
+                            parseInt(dateParts[0])
+                        );
                         const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
                         isPast = eventDate < today;
                     }
 
                     const card = document.createElement('div');
                     card.className = 'event-card glass-item';
-                    
+
                     const statusClass = isPast ? 'status-completed' : 'status-upcoming';
-                    const statusText = isPast ? 'Concluído' : 'Confirmado';
-                    
+                    const statusText  = isPast ? 'Concluído' : 'Confirmado';
+
                     card.innerHTML = `
                         <span class="status-badge ${statusClass}">${statusText}</span>
                         <span class="date">${dateStr}</span>
@@ -352,7 +367,7 @@
 
             } catch (error) {
                 console.error('Erro ao carregar eventos:', error);
-                upcomingContainer.innerHTML = '<p style="color: var(--text-muted);">Erro ao carregar eventos do Drive.</p>';
+                upcomingContainer.innerHTML = '<p style="color: var(--text-muted);">Erro ao carregar eventos.</p>';
             }
         }
 
