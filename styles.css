@@ -413,6 +413,73 @@ h2 {
 }
 
 /* ==========================================================================
+   Events Section
+   ========================================================================== */
+.events-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.events-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--color-orange-main);
+    border-left: 4px solid var(--color-orange-main);
+    padding-left: 15px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.event-card {
+    padding: 30px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.event-card .date {
+    display: inline-block;
+    background: var(--color-orange-main);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.event-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.event-card p {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.status-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.status-upcoming { background: rgba(0, 255, 0, 0.1); color: #008000; }
+.status-completed { background: rgba(0, 0, 0, 0.05); color: var(--text-muted); }
+
+/* ==========================================================================
    Team Section
    ========================================================================== */
 .team-grid {

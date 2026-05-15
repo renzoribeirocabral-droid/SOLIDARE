@@ -18,6 +18,7 @@
             <li><a href="#home">Página inicial</a></li>
             <li><a href="#about">Sobre o Projeto</a></li>
             <li><a href="#impact">Impacto</a></li>
+            <li><a href="#events">Eventos</a></li>
             <li><a href="#gallery">Galeria</a></li>
             <li><a href="#team">Nosso Time</a></li>
         </ul>
@@ -73,6 +74,44 @@
                 <div class="impact-card glass-item">
                     <h3>400+</h3>
                     <p>Vidas impactadas diretamente por nossas ações.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="glass-panel">
+            <h2>Nossos Eventos</h2>
+            <div class="events-container">
+                <!-- Próximos Eventos -->
+                <div class="events-category">
+                    <h3>Próximos Eventos</h3>
+                    <div class="events-grid">
+                        <div class="event-card glass-item">
+                            <span class="status-badge status-upcoming">Confirmado</span>
+                            <span class="date">10 Set 2026</span>
+                            <h4>Entrega de Marmitas</h4>
+                            <p>Distribuição de marmitas em UPAs de Aparecida de Goiânia para apoiar acompanhantes e pacientes em situação de vulnerabilidade.</p>
+                        </div>
+                        <div class="event-card glass-item">
+                            <span class="status-badge status-upcoming">Em Planejamento</span>
+                            <span class="date">05 Out 2026</span>
+                            <h4>Dia das Crianças</h4>
+                            <p>Ação especial na Comunidade Chácara São Pedro com atividades culturais, lanches e distribuição de brinquedos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eventos Encerrados -->
+                <div class="events-category">
+                    <h3>Eventos Encerrados</h3>
+                    <div class="events-grid">
+                        <div class="event-card glass-item">
+                            <span class="status-badge status-completed">Concluído</span>
+                            <span class="date">Abril 2026</span>
+                            <h4>Lançamento SOLIDARE</h4>
+                            <p>Início das atividades da iniciativa com a formação dos primeiros 60 líderes solidários na Escola Maple Bear.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -195,8 +234,8 @@
         // ==========================================
         const API_KEY = 'AIzaSyAvs_098l_IklNBigjXeoH5Im8xuyahidI';
         
-        // Coloque aqui o ID da SUA PASTA (o link que você me mandou parecia ser de um arquivo)
-        const FOLDER_ID = '1LaCT5FHlQ6vhlmJnkTLELFlGh4P83aBs'; 
+        // ID da pasta "fotos" dentro da pasta SOLIDARE
+        const FOLDER_ID = '1NTxE0-9VFTc80oaGtPEjucIHvOMX6pPS'; 
 
         async function loadGallery() {
             const galleryContainer = document.getElementById('dynamic-gallery');
